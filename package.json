@@ -1,0 +1,15 @@
+{
+    "name": "proxy",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@hurdlegroup/robotjs": "^0.12.0",
+        "serialport": "^12.0.0"
+    }
+}
