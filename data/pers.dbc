@@ -1,0 +1,763 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: User_Computer ASI_Controller_2 ASI_Controller_1 Heinzmann_Controller_2 Heinzmann_Controller_1 GEM_Controller_2 GEM_Controller_1 Sigma AES PERS Cockpit TRITEK GOLDENCELL BMZ
+
+
+BO_ 2599480593 AES_BATT_Msg16: 8 AES
+ SG_ AES_Batt_Type : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2599485200 AES_BATT_Msg15: 2 PERS
+ SG_ AES_Shutdown : 0|8@1+ (1,0) [0|0] ""  AES
+ SG_ AES_Recuperating : 8|1@1+ (1,0) [0|0] ""  AES
+
+BO_ 2599481105 AES_BATT_Msg13: 8 AES
+ SG_ AES_swVersion : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2599482641 AES_BATT_Msg11: 6 AES
+ SG_ AES_cellVoltage13 : 0|16@1+ (1,0) [0|0] "mV" Vector__XXX
+ SG_ AES_cellVoltage14 : 16|16@1+ (1,0) [0|0] "mV" Vector__XXX
+ SG_ AES_cellVoltage15 : 32|16@1+ (1,0) [0|0] "mV" Vector__XXX
+
+BO_ 2599482897 AES_BATT_Msg10: 8 AES
+ SG_ AES_cellVoltage09 : 0|16@1+ (1,0) [0|0] "mV" Vector__XXX
+
+BO_ 2599483153 AES_BATT_Msg09: 8 AES
+ SG_ AES_cellVoltage05 : 0|16@1+ (1,0) [0|0] "mV" Vector__XXX
+
+BO_ 2599483409 AES_BATT_Msg08: 8 AES
+ SG_ AES_cellVoltage01 : 0|16@1+ (1,0) [0|0] "mV" Vector__XXX
+
+BO_ 129 Tool_Param_Update_Rx: 8 User_Computer
+
+BO_ 128 Tool_Param_Update_Tx: 8 PERS
+
+BO_ 241 Tool_Log_Access_Rx: 8 User_Computer
+ SG_ Tool_Log_Access_opcode_rx M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Tool_Log_Access_command_rx m320 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Tool_Log_Access_cmd_data_rx m320 : 24|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Tool_Log_Access_file_size m321 : 16|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Tool_Log_Access_file_id m321 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Tool_Log_Access_u32_data m322 : 16|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 224 Tool_Firmware_Update_Tx: 6 PERS
+
+BO_ 225 Tool_Firmware_Update_Rx: 6 User_Computer
+
+BO_ 81 PERS_data: 8 PERS
+ SG_ PERS_data_Mux M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PERS_position m419 : 16|32@1- (1,0) [-2147483648|2147483647] "" Vector__XXX
+ SG_ PERS_speed m419 : 48|16@1- (1,0) [-32768|32767] "RPM" Vector__XXX
+ SG_ PERS_torque_setpoint m420 : 16|16@1- (1,0) [-32768|32767] "mNm" Vector__XXX
+ SG_ PERS_status m160 : 16|16@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PERS_effort_level m161 : 16|8@1- (1,0) [0|13] "" Vector__XXX
+ SG_ PERS_propu_torque_setpoint m422 : 16|32@1- (1,0) [-2147483648|2147483647] "" Vector__XXX
+ SG_ PERS_Cadence_level m162 : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PERS_torque_measured m420 : 32|32@1- (1,0) [-2147483648|2147483647] "mNm" Vector__XXX
+ SG_ PERS_Vbus m421 : 16|16@1+ (1,0) [-32768|32767] "mV" Vector__XXX
+ SG_ PERS_Ibatt m421 : 32|32@1- (1,0) [-2147483648|2147483647] "mA" Vector__XXX
+
+BO_ 426 ASI1_TPDO1: 8 ASI_Controller_1
+ SG_ ASI1_Motor_speed : 0|16@1- (0.14648,0) [-4799.85664|4799.71016] "RPM"  PERS
+ SG_ ASI1_Input_Current : 16|16@1- (0.03125,0) [-1024|1023.96875] "A"  PERS
+ SG_ ASI1_Input_Voltage : 32|16@1- (0.03125,0) [-1024|1023.96875] "V"  PERS
+ SG_ ASI1_Iq : 48|16@1- (0.02197265625,0) [-720|719.97802734] ""  PERS
+
+BO_ 682 ASI1_TPDO2: 8 ASI_Controller_1
+ SG_ ASI1_Phase_A_Voltage : 0|16@1- (0.03125,0) [-1024|1023.96875] "V"  PERS
+ SG_ ASI1_Phase_A_Current : 16|16@1- (0.03125,0) [-1024|1023.96875] "A"  PERS
+ SG_ ASI1_Motor_Current : 32|16@1- (0.03125,0) [-1024|1023.96875] "A"  PERS
+ SG_ ASI1_Digital_Inputs : 48|16@1+ (1,0) [0|0] ""  PERS
+
+BO_ 938 ASI1_TPDO3: 8 ASI_Controller_1
+ SG_ ASI1_Motor_Temperature : 0|16@1- (1,0) [-32768|32767] "?C"  PERS
+ SG_ ASI1_Controller_Temperature : 16|16@1- (1,0) [-32768|32767] "?C"  PERS
+
+BO_ 1578 ASI1_SDO_request: 8 PERS
+ SG_ ASI1_SDO_request_Mux M : 8|24@1+ (1,0) [0|0] ""  ASI_Controller_1
+ SG_ ASI1_mode m794624 : 32|1@1+ (1,0) [0|1] ""  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p11 m794624 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_Max_monit_current m2891783 : 32|16@1+ (1,0) [0|4096] ""  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p491 m2891783 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_Max_braking_current m2957319 : 32|16@1+ (1,0) [0|4096] ""  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p492 m2957319 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_RemoteState m3022855 : 32|8@1+ (1,0) [0|2] ""  ASI_Controller_1
+ SG_ ASI1_Heartbeat m3022855 : 40|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p493 m3022855 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_Torque_Cmd m3088391 : 32|16@1- (0.02441406,0) [-100|100] "%"  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p494 m3088391 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_Speed_Cmd m925722 : 32|16@1- (1,0) [-32768|32767] "rpm"  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p1677 m925722 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_Filtered_Q_curr m1908741 : 32|16@1- (1,0) [-32768|32767] "pu"  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p348 m1908741 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_Faults1 m204804 : 32|16@1- (1,0) [-32768|32767] "pu"  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p258 m204804 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+ SG_ ASI1_Faults2 m2891780 : 32|16@1- (1,0) [-32768|32767] "pu"  ASI_Controller_1
+ SG_ ASI1_SDO_cmd_p299 m2891780 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_1
+
+BO_ 1450 ASI1_SDO_Answer: 8 ASI_Controller_1
+ SG_ ASI1_SDO_Answer_Mux M : 8|24@1+ (1,0) [0|0] ""  PERS
+ SG_ ASI1_SDO_p11_in m794624 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_mode_in m794624 : 32|32@1- (1,0) [0|1] ""  PERS
+ SG_ ASI1_Max_monit_current_in m2891783 : 32|16@1+ (1,0) [0|4096] ""  PERS
+ SG_ ASI1_SDO_p491_in m2891783 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_SDO_p492_in m2957319 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_Max_braking_curr m2957319 : 32|16@1+ (1,0) [0|4096] ""  PERS
+ SG_ ASI1_SDO_p494_in m3088391 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_Torque_Cmd_in m3088391 : 32|16@1- (0.02441406,0) [-100|100] "%"  PERS
+ SG_ ASI1_SDO_p1677_in m925722 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_Speed_Cmd_in m925722 : 32|16@1- (1,0) [-32768|32767] "rpm"  PERS
+ SG_ ASI1_SDO_p493_in m3022855 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_RemoteState_in m3022855 : 32|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_Heartbeat_in m3022855 : 40|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_SDO_p348_in m1908741 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_Filtered_Q_curr_in m1908741 : 32|32@1- (1,0) [-32768|32767] "pu"  PERS
+ SG_ ASI1_SDO_p258_in m204804 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_Faults1_in m204804 : 32|32@1+ (1,0) [0|4294967295] ""  PERS
+ SG_ ASI1_SDO_p299_in m2891780 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI1_Faults2_in m2891780 : 32|32@1+ (1,0) [0|4294967295] ""  PERS
+
+BO_ 1834 ASI1_Heartbeat: 1 ASI_Controller_1
+ SG_ ASI1_State_code : 0|8@1+ (1,0) [0|1] ""  PERS
+
+BO_ 170 ASI1_Error: 8 ASI_Controller_1
+ SG_ ASI1_Emergency_code : 0|16@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI1_Error_register : 16|8@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI1_err_Faults2 : 24|8@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI1_err_Faults1 : 32|16@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI1_Warnings : 48|16@1+ (1,0) [0|1] ""  PERS
+
+BO_ 171 ASI2_Error: 8 ASI_Controller_2
+ SG_ ASI2_Emergency_code : 0|16@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI2_Error_register : 16|8@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI2_err_Faults2 : 24|8@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI2_err_Faults1 : 32|16@1+ (1,0) [0|1] ""  PERS
+ SG_ ASI2_Warnings : 48|16@1+ (1,0) [0|1] ""  PERS
+
+BO_ 427 ASI2_TPDO1: 8 ASI_Controller_2
+ SG_ ASI2_Motor_speed : 0|16@1- (0.14648,0) [-4799.85664|4799.71016] "RPM"  PERS
+ SG_ ASI2_Input_Current : 16|16@1- (0.03125,0) [-1024|1023.96875] "A"  PERS
+ SG_ ASI2_Input_Voltage : 32|16@1- (0.03125,0) [-1024|1023.96875] "V"  PERS
+ SG_ ASI2_Iq : 48|16@1- (0.02197265625,0) [-720|719.97802734] ""  PERS
+
+BO_ 683 ASI2_TPDO2: 8 ASI_Controller_2
+ SG_ ASI2_Phase_A_Voltage : 0|16@1- (0.03125,0) [-1024|1023.96875] "V"  PERS
+ SG_ ASI2_Phase_A_Current : 16|16@1- (0.03125,0) [-1024|1023.96875] "A"  PERS
+ SG_ ASI2_Motor_Current : 32|16@1- (0.03125,0) [-1024|1023.96875] "A"  PERS
+ SG_ ASI2_Digital_Inputs : 48|16@1+ (1,0) [0|0] ""  PERS
+
+BO_ 939 ASI2_TPDO3: 8 ASI_Controller_2
+ SG_ ASI2_Motor_Temperature : 0|16@1- (1,0) [-32768|32767] "?C"  PERS
+ SG_ ASI2_Controller_Temperature : 16|16@1- (1,0) [-32768|32767] "?C"  PERS
+
+BO_ 1579 ASI2_SDO_request: 8 PERS
+ SG_ ASI2_SDO_request_Mux M : 8|24@1+ (1,0) [0|0] ""  ASI_Controller_2
+ SG_ ASI2_mode m794624 : 32|1@1+ (1,0) [0|1] ""  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p11 m794624 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_Max_monit_current m2891783 : 32|16@1+ (1,0) [0|4096] ""  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p491 m2891783 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_Max_braking_current m2957319 : 32|16@1+ (1,0) [0|4096] ""  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p492 m2957319 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_RemoteState m3022855 : 32|8@1+ (1,0) [0|2] ""  ASI_Controller_2
+ SG_ ASI2_Heartbeat m3022855 : 40|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p493 m3022855 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_Torque_Cmd m3088391 : 32|16@1- (0.02441406,0) [-799.99991808|799.97550402] "%"  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p494 m3088391 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_Speed_Cmd m925722 : 32|16@1- (1,0) [-32768|32767] "rpm"  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p1677 m925722 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_Filtered_Q_curr m1908741 : 32|16@1- (1,0) [-32768|32767] "pu"  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p348 m1908741 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_Faults1 m204804 : 32|16@1+ (1,0) [0|65535] ""  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p258 m204804 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+ SG_ ASI2_Faults2 m2891780 : 32|16@1+ (1,0) [0|65535] ""  ASI_Controller_2
+ SG_ ASI2_SDO_cmd_p299 m2891780 : 0|8@1+ (1,0) [0|255] ""  ASI_Controller_2
+
+BO_ 1451 ASI2_SDO_Answer: 8 ASI_Controller_2
+ SG_ ASI2_SDO_Answer_Mux M : 8|24@1+ (1,0) [0|0] ""  PERS
+ SG_ ASI2_SDO_p11_in m794624 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_mode_in m794624 : 32|16@1- (1,0) [0|1] ""  PERS
+ SG_ ASI2_Max_monit_current_in m2891783 : 32|16@1+ (1,0) [0|4096] ""  PERS
+ SG_ ASI2_SDO_p491_in m2891783 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_SDO_p492_in m2957319 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_Max_braking_curr m2957319 : 32|16@1- (1,0) [0|4096] ""  PERS
+ SG_ ASI2_SDO_p494_in m3088391 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_Torque_Cmd_in m3088391 : 32|16@1- (0.02441406,0) [-100|100] "%"  PERS
+ SG_ ASI2_SDO_p493_in m925722 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_Speed_Cmd_in m925722 : 32|16@1- (1,0) [-32768|32767] "rpm"  PERS
+ SG_ ASI2_SDO_p1677_in m3022855 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_RemoteState_in m3022855 : 32|8@1+ (1,0) [0|255] "rpm"  PERS
+ SG_ ASI2_Heartbeat_in m3022855 : 40|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_SDO_p348_in m1908741 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_Filtered_Q_curr_in m1908741 : 32|16@1- (1,0) [-32768|32767] "pu"  PERS
+ SG_ ASI2_SDO_p258_in m204804 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_Faults1_in m204804 : 32|16@1+ (1,0) [0|65535] ""  PERS
+ SG_ ASI2_SDO_p299_in m2891780 : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ ASI2_Faults2_in m2891780 : 32|16@1+ (1,0) [0|65535] ""  PERS
+
+BO_ 1835 ASI2_Heartbeat: 1 ASI_Controller_2
+ SG_ ASI2_State_code : 0|8@1+ (1,0) [0|1] ""  PERS
+
+BO_ 2599485201 AES_BATT_Msg01: 6 AES
+ SG_ AES_averageDischargeCurrent : 0|16@1+ (1,0) [0|65535] "mA"  PERS
+ SG_ AES_currentDischargeCurrent : 16|16@1+ (1,0) [0|65535] "mA"  PERS
+ SG_ AES_currentChargeCurrent : 32|16@1+ (1,0) [0|65535] "mA"  PERS
+
+BO_ 2599484945 AES_BATT_Msg02: 6 AES
+ SG_ AES_currentLinkVoltage : 16|16@1+ (1,0) [0|65535] "mV"  PERS
+ SG_ AES_currentPackVoltage : 0|16@1+ (1,0) [0|65535] "mV"  PERS
+ SG_ AES_BatteryCurrent : 32|16@1- (0.1,0) [-3276.8|3276.7] "mA"  PERS
+
+BO_ 2599484689 AES_BATT_Msg03: 8 AES
+ SG_ AES_packCharge : 0|32@1+ (1,0) [0|4294967295] "As"  PERS
+ SG_ AES_packDischarge : 32|32@1+ (1,0) [0|4294967295] "As"  PERS
+
+BO_ 2599484433 AES_BATT_Msg04: 8 AES
+ SG_ AES_RemainingCapacity : 0|16@1+ (1,0) [0|65535] "mAh"  PERS
+ SG_ AES_SOC : 16|8@1+ (1,0) [0|255] "%"  PERS
+ SG_ AES_SOH : 24|8@1+ (1,0) [0|255] "%"  PERS
+ SG_ AES_FullChargeCapacity : 32|16@1+ (1,0) [0|65535] "mAh"  PERS
+ SG_ AES_ChargingCycles : 48|16@1+ (1,0) [0|65535] ""  PERS
+
+BO_ 2599484177 AES_BATT_Msg05: 8 AES
+ SG_ AES_CriticalError : 0|1@1+ (1,0) [0|1] ""  PERS
+ SG_ AES_MinorError : 1|1@1+ (1,0) [0|1] ""  PERS
+ SG_ AES_ChargerDetect : 2|1@1+ (1,0) [0|1] ""  PERS
+ SG_ AES_PrepareDeepSleep : 3|1@1+ (1,0) [0|1] ""  PERS
+ SG_ AES_Discharging : 4|1@1+ (1,0) [0|1] ""  PERS
+ SG_ AES_Charging : 5|1@1+ (1,0) [0|1] ""  PERS
+ SG_ AES_WakeDetect : 8|8@1+ (1,0) [0|255] ""  PERS
+ SG_ AES_DischargeCurrentMax : 16|32@1+ (1,0) [0|4294967295] "mA"  PERS
+ SG_ AES_ChargeCurrentMax : 48|16@1+ (1,0) [0|65535] "mA"  PERS
+
+BO_ 2599483921 AES_BATT_Msg06: 4 AES
+ SG_ AES_dischargeCurrentForNext2s : 0|16@1+ (1,0) [0|65535] "mA"  PERS
+ SG_ AES_dischargeCurrentForNext10s : 16|16@1+ (1,0) [0|65535] "mA"  PERS
+
+BO_ 2599483665 AES_BATT_Msg07: 4 AES
+ SG_ AES_ChargeCurrentForNext2s : 0|16@1+ (1,0) [0|65535] "mA"  PERS
+ SG_ AES_ChargeCurrentForNext10s : 16|16@1+ (1,0) [0|65535] "mA"  PERS
+
+BO_ 2599481617 AES_BATT_Msg12: 6 AES
+ SG_ AES_cellTemperatureMin : 0|16@1+ (1,0) [0|65535] "K"  PERS
+ SG_ AES_cellTemperatureMax : 16|16@1+ (1,0) [0|65535] "K"  PERS
+ SG_ AES_BatteryTemperature : 32|16@1+ (1,0) [0|65535] "K"  PERS
+
+BO_ 2599480849 AES_BATT_Msg14: 8 AES
+ SG_ AES_Error1 : 0|16@1+ (1,0) [0|65535] ""  PERS
+ SG_ AES_Error2 : 16|16@1+ (1,0) [0|65535] ""  PERS
+ SG_ AES_Warning1 : 32|16@1+ (1,0) [0|65535] ""  PERS
+ SG_ AES_Warning2 : 48|16@1+ (1,0) [0|65535] ""  PERS
+
+BO_ 259 Sigma_screen_REPLY_S_DATA: 6 Sigma
+ SG_ Sigma_screen_REPLY_S_DATA_Mux M : 4|12@1+ (1,0) [0|0] ""  PERS
+ SG_ Sigma_Status_reply_s m1284 : 0|4@1+ (1,0) [0|15] ""  PERS
+ SG_ Sigma_UP_Button_read m1284 : 16|4@1+ (1,0) [0|15] ""  PERS
+ SG_ Sigma_DOWN_Button_read m1284 : 20|4@1+ (1,0) [0|1] ""  PERS
+ SG_ Sigma_A_Button_read m1284 : 24|4@1+ (1,0) [0|15] ""  PERS
+ SG_ Sigma_B_Button_read m1284 : 28|4@1+ (1,0) [0|15] ""  PERS
+ SG_ Sigma_C_Button_read m1284 : 32|4@1+ (1,0) [0|15] ""  PERS
+ SG_ Sigma_Power_Button_read m1284 : 36|4@1+ (1,0) [0|15] ""  PERS
+ SG_ Sigma_LIGHT_Button_read m1284 : 40|4@1+ (1,0) [0|15] ""  PERS
+
+BO_ 291 Sigma_screen_ACKN_S_DATA: 2 Sigma
+ SG_ Sigma_Object_ID : 4|12@1+ (1,0) [0|4095] ""  PERS
+ SG_ Sigma_Status_ackn_s : 0|4@1+ (1,0) [0|15] ""  PERS
+
+BO_ 1795 Sigma_screen_READ_S_DATA: 2 PERS
+ SG_ Sigma_screen_READ_S_DATA_Mux M : 0|16@1+ (1,0) [0|0] ""  Sigma
+
+BO_ 1827 Sigma_screen_WRITE_S_DATA: 8 PERS
+ SG_ Sigma_screen_WRITE_S_DATA_Mux M : 0|16@1+ (1,0) [0|0] ""  Sigma
+ SG_ Sigma_LED1 m1285 : 16|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED2 m1285 : 20|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED3 m1285 : 24|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED4 m1285 : 28|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED5 m1285 : 32|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED6 m1285 : 36|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED7 m1285 : 40|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED8 m1285 : 44|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_LED9 m1285 : 48|4@1+ (1,0) [0|15] ""  Sigma
+ SG_ Sigma_UP_Button_cfg m1282 : 16|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_DOWN_Button_cfg m1282 : 20|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_A_Button_cfg m1282 : 24|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_B_Button_cfg m1282 : 28|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_C_Button_cfg m1282 : 32|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_LIGHT_Button_cfg m1282 : 40|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_LED_indicator_cfg m1282 : 44|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_welcome_color_cfg m1282 : 48|4@1+ (1,0) [0|5] ""  Sigma
+ SG_ Sigma_light_auto_cfg m1282 : 52|4@1+ (1,0) [0|1] ""  Sigma
+ SG_ Sigma_protocol_major_version m0 : 16|8@1+ (1,0) [0|250] ""  Sigma
+ SG_ Sigma_protocol_minor_version m0 : 24|8@1+ (1,8) [8|250] ""  Sigma
+ SG_ Sigma_e_system_id m66 : 16|8@1+ (1,0) [0|250] ""  Sigma
+ SG_ Sigma_bike_type m66 : 24|8@1+ (1,0) [0|2] ""  Sigma
+ SG_ Sigma_nbr_assist_modes m66 : 32|8@1+ (1,0) [0|9] ""  Sigma
+ SG_ Sigma_nbr_recup_modes m66 : 40|8@1+ (1,0) [0|9] ""  Sigma
+ SG_ Sigma_light_availibility m66 : 48|8@1+ (1,0) [0|14] ""  Sigma
+ SG_ Sigma_gears_availability m66 : 56|8@1+ (1,0) [0|14] ""  Sigma
+ SG_ Sigma_speed m16 : 16|16@1+ (0.01,0) [0|199.99] "km/h"  Sigma
+ SG_ Sigma_odometer m16 : 32|32@1+ (1,0) [0|4294967250] "km"  Sigma
+ SG_ Sigma_assist_mode m83 : 16|8@1+ (1,0) [0|9] ""  Sigma
+ SG_ Sigma_battery_soc m48 : 16|8@1+ (1,0) [0|100] "%"  Sigma
+ SG_ Sigma_battery_capacity m48 : 24|16@1+ (0.1,0) [0|6550] "Wh"  Sigma
+
+BO_ 97 GEM1_status_0: 8 GEM_Controller_1
+ SG_ GEM1_control_value_in : 0|16@1- (1,0) [-32768|32767] "trq% / rpm*10"  PERS
+ SG_ GEM1_control_mode_in : 16|2@1+ (1,0) [0|3] ""  PERS
+ SG_ GEM1_motor_mode_in : 18|3@1+ (1,0) [0|7] ""  PERS
+ SG_ GEM1_sw_enable_in : 21|1@1+ (1,0) [0|1] ""  PERS
+ SG_ GEM1_motor_state : 22|2@1+ (1,0) [0|3] ""  PERS
+ SG_ GEM1_motor_torque : 24|16@1- (1,0) [-32768|32767] "Nm"  PERS
+ SG_ GEM1_motor_rpm : 40|16@1- (0.1,0) [-3276.8|3276.7] "RPM (0.1 resol)"  PERS
+ SG_ GEM1_motor_temp : 56|8@1- (1,0) [-128|127] "deg C"  PERS
+
+BO_ 96 GEM1_control: 3 PERS
+ SG_ GEM1_control_value : 0|16@1- (1,0) [-32768|32767] "trq% / rpm*10"  GEM_Controller_1
+ SG_ GEM1_control_mode : 16|2@1+ (1,0) [0|3] ""  GEM_Controller_1
+ SG_ GEM1_motor_mode : 18|3@1+ (1,0) [0|7] ""  GEM_Controller_1
+ SG_ GEM1_sw_enable : 21|1@1+ (1,0) [0|1] ""  GEM_Controller_1
+ SG_ GEM1_debug_mode : 23|1@1+ (1,0) [0|1] ""  GEM_Controller_1
+
+BO_ 99 GEM1_warning: 8 GEM_Controller_1
+ SG_ GEM1_warning_code : 0|64@1+ (1,0) [0|1.8446744074e+19] ""  PERS
+
+BO_ 98 GEM1_status_1: 6 GEM_Controller_1
+ SG_ GEM1_inv_peak_cur : 0|16@1- (1,0) [-32768|32767] "Amp"  PERS
+ SG_ GEM1_motor_power : 16|16@1- (1,0) [-32768|32767] "W"  PERS
+ SG_ GEM1_abs_position : 32|16@1- (0.5,0) [-16384|16383.5] "deg"  PERS
+
+BO_ 100 GEM1_error: 8 GEM_Controller_1
+ SG_ GEM1_error_code : 0|64@1+ (1,0) [0|1.8446744074e+19] ""  PERS
+
+BO_ 113 GEM2_status_0: 8 GEM_Controller_2
+ SG_ GEM2_control_value_in : 0|16@1- (1,0) [-32768|32767] "trq% / rpm*10"  PERS
+ SG_ GEM2_control_mode_in : 16|2@1+ (1,0) [0|3] ""  PERS
+ SG_ GEM2_motor_mode_in : 18|3@1+ (1,0) [0|7] ""  PERS
+ SG_ GEM2_sw_enable_in : 21|1@1+ (1,0) [0|1] ""  PERS
+ SG_ GEM2_motor_state : 22|2@1+ (1,0) [0|3] ""  PERS
+ SG_ GEM2_motor_torque : 24|16@1- (1,0) [-32768|32767] "Nm"  PERS
+ SG_ GEM2_motor_rpm : 40|16@1- (0.1,0) [-3276.8|3276.7] "RPM (0.1 resol)"  PERS
+ SG_ GEM2_motor_temp : 56|8@1- (1,0) [-128|127] "deg C"  PERS
+
+BO_ 112 GEM2_control: 3 PERS
+ SG_ GEM2_control_value : 0|16@1- (1,0) [-32768|32767] "trq% / rpm*10"  GEM_Controller_2
+ SG_ GEM2_control_mode : 16|2@1+ (1,0) [0|3] ""  GEM_Controller_2
+ SG_ GEM2_motor_mode : 18|3@1+ (1,0) [0|7] ""  GEM_Controller_2
+ SG_ GEM2_sw_enable : 21|1@1+ (1,0) [0|1] ""  GEM_Controller_2
+ SG_ GEM2_debug_mode : 23|1@1+ (1,0) [0|1] ""  GEM_Controller_2
+
+BO_ 115 GEM2_warning: 8 GEM_Controller_2
+ SG_ GEM2_warning_code : 0|64@1+ (1,0) [0|1.8446744074e+19] ""  PERS
+
+BO_ 114 GEM2_status_1: 6 GEM_Controller_2
+ SG_ GEM2_inv_peak_cur : 0|16@1- (1,0) [-32768|32767] "Amp"  PERS
+ SG_ GEM2_motor_power : 16|16@1- (1,0) [-32768|32767] "W"  PERS
+ SG_ GEM2_abs_position : 32|16@1- (0.5,0) [-16384|16383.5] "deg"  PERS
+
+BO_ 116 GEM2_error: 8 GEM_Controller_2
+ SG_ GEM2_error_code : 0|64@1+ (1,0) [0|1.8446744074e+19] ""  PERS
+
+BO_ 2181349722 HZM1_Ext_control: 8 PERS
+ SG_ HZM1_torque_setpoint : 7|16@0+ (0.006103515625,0) [0|200] ""  Heinzmann_Controller_1
+ SG_ HZM1_system_release : 23|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_1
+ SG_ HZM1_direction_write : 22|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_1
+ SG_ HZM1_shutdown_request : 21|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_1
+ SG_ HZM1_brake_on : 20|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_1
+ SG_ HZM1_motor_braking_on : 19|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_1
+ SG_ HZM1_recuperation_level : 30|7@0+ (1,0) [0|100] ""  Heinzmann_Controller_1
+ SG_ HZM1_recup_or_assis_level : 31|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_1
+ SG_ HZM1_sequence_number : 55|8@0+ (1,0) [0|255] ""  Heinzmann_Controller_1
+ SG_ HZM1_CRC : 63|8@0+ (1,0) [0|0] ""  Heinzmann_Controller_1
+
+BO_ 2466545970 HZM1_Cfg_Telegram_1: 8 Heinzmann_Controller_1
+ SG_ HZM1_motor_speed : 7|16@0- (0.10429,0) [-32768|32767] "rpm"  PERS
+ SG_ HZM1_motor_torque : 23|16@0- (0.1,0) [-3276.8|3276.7] ""  PERS
+ SG_ HZM1_max_motor_torque : 39|16@0- (0.1,0) [-3276.8|3276.7] "Nm"  PERS
+ SG_ HZM1_direction_read : 56|1@0+ (1,0) [0|1] ""  PERS
+
+BO_ 2466545971 HZM1_Cfg_Telegram_2: 2 Heinzmann_Controller_1
+ SG_ HZM1_motor_temperature : 7|16@0- (0.1,0) [-3276.8|3276.7] "°C"  PERS
+
+BO_ 2466546017 HZM1_Connection_Establishment: 0 Heinzmann_Controller_1
+
+BO_ 2466546273 HZM2_Connection_Establishment: 0 Heinzmann_Controller_2
+
+BO_ 2466546226 HZM2_Cfg_Telegram_1: 8 Heinzmann_Controller_2
+ SG_ HZM2_motor_speed : 7|16@0- (0.10429,0) [-32768|32767] "rpm"  PERS
+ SG_ HZM2_motor_torque : 23|16@0- (0.1,0) [-3276.8|3276.7] ""  PERS
+ SG_ HZM2_max_motor_torque : 39|16@0- (0.1,0) [-3276.8|3276.7] "Nm"  PERS
+ SG_ HZM2_direction_read : 56|1@0+ (1,0) [0|1] ""  PERS
+
+BO_ 2466546227 HZM2_Cfg_Telegram_2: 2 Heinzmann_Controller_2
+ SG_ HZM2_motor_temperature : 7|16@0- (0.1,0) [-3276.8|3276.7] "°C"  PERS
+
+BO_ 2181611866 HZM2_Ext_control: 8 PERS
+ SG_ HZM2_torque_setpoint : 7|16@0+ (0.006103515625,0) [0|200] ""  Heinzmann_Controller_2
+ SG_ HZM2_system_release : 23|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_2
+ SG_ HZM2_direction_write : 22|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_2
+ SG_ HZM2_shutdown_request : 21|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_2
+ SG_ HZM2_brake_on : 20|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_2
+ SG_ HZM2_motor_braking_on : 19|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_2
+ SG_ HZM2_recuperation_level : 30|7@0+ (1,0) [0|100] ""  Heinzmann_Controller_2
+ SG_ HZM2_recup_or_assis_level : 31|1@0+ (1,0) [0|1] ""  Heinzmann_Controller_2
+ SG_ HZM2_sequence_number : 55|8@0+ (1,0) [0|255] ""  Heinzmann_Controller_2
+ SG_ HZM2_CRC : 63|8@0+ (1,0) [0|0] ""  Heinzmann_Controller_2
+
+BO_ 2449768802 HZM1_duplicate_ID_check: 1 Heinzmann_Controller_1
+ SG_ HZM1_duplicate_id_check_value : 0|1@1+ (1,0) [1|1] ""  PERS
+
+BO_ 2450031202 HZM2_duplicate_ID_check: 1 Heinzmann_Controller_2
+ SG_ HZM2_duplicate_id_check_value : 0|1@1+ (1,0) [1|1] ""  PERS
+
+BO_ 2466546061 HZM1_Error1: 8 Heinzmann_Controller_1
+ SG_ HZM1_Error1_byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error1_byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error1_byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error1_byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error1_byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error1_byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error1_byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error1_byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2466546062 HZM1_Error2: 8 Heinzmann_Controller_1
+ SG_ HZM1_Error2_byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error2_byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error2_byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error2_byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error2_byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error2_byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error2_byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM1_Error2_byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2466546318 HZM2_Error1: 8 Heinzmann_Controller_2
+ SG_ HZM2_Error1_byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error1_byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error1_byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error1_byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error1_byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error1_byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error1_byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error1_byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2466546317 HZM2_Error2: 8 Heinzmann_Controller_2
+ SG_ HZM2_Error2_byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error2_byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error2_byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error2_byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error2_byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error2_byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error2_byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HZM2_Error2_byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2466545960 HZM1_Alarm: 2 Heinzmann_Controller_1
+ SG_ HZM1_Alarm_data : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2466546216 HZM2_Alarm: 2 Heinzmann_Controller_2
+ SG_ HZM2_Alarm_data : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 343 Display_Riding_Info: 8 PERS
+ SG_ displayVehicleSpeed : 0|15@1+ (0.01,-40) [-40|80] "km/h"  Cockpit
+ SG_ displaySpeedUnit : 15|1@1+ (1,0) [0|1] ""  Cockpit
+ SG_ displayPersCadence : 16|8@1+ (1,0) [0|255] "rpm"  Cockpit
+ SG_ cadenceComfortApplied : 24|4@1+ (1,0) [0|15] "-"  Cockpit
+ SG_ displayPowerLevelApplied : 32|4@1+ (1,0) [0|15] "-"  Cockpit
+ SG_ displayRideMode : 40|2@1+ (1,0) [0|3] ""  Cockpit
+
+BO_ 344 Display_Riding_Power: 8 PERS
+ SG_ displayPedallingPower : 0|10@1+ (1,0) [0|1024] "W"  Cockpit
+ SG_ disPedallingPowerInPerCent : 10|7@1+ (1,0) [0|100] "%"  Cockpit
+ SG_ displayPropulsionPower : 17|15@1+ (1,0) [0|32767] "W"  Cockpit
+ SG_ disPropulsionPowerInPerCent : 32|7@1+ (1,0) [0|100] "%"  Cockpit
+ SG_ displayRegenPower : 40|15@1+ (1,0) [0|32767] "W"  Cockpit
+ SG_ disRegenPowerInPerCent : 56|7@1+ (1,0) [0|100] "%"  Cockpit
+
+BO_ 993 Authentication_Action_State: 2 PERS
+ SG_ authenticationReceivedMsgId : 0|8@1+ (1,0) [0|255] ""  Cockpit
+ SG_ authenticationActionResult : 8|8@1+ (1,0) [0|255] ""  Cockpit
+
+BO_ 994 Cockpit_Settings_Action_State: 2 PERS
+ SG_ cockpitSettingReceivedMsgId : 0|8@1+ (1,0) [0|255] ""  Cockpit
+ SG_ changeSpeedUnitResult : 8|2@1+ (1,0) [0|2] "-"  Cockpit
+
+BO_ 64 PERS_State: 6 PERS
+ SG_ persGeneralState : 0|16@1+ (1,0) [0|65535] ""  Cockpit
+ SG_ persAuthenticationState : 16|4@1+ (1,0) [0|3] ""  Cockpit
+
+BO_ 950 Odometer: 4 PERS
+ SG_ Odometer : 0|32@1+ (0.001,0) [0|4294970] "KM"  Cockpit
+
+BO_ 359 Display_Energy: 2 PERS
+ SG_ displayBatterySOC : 0|7@1+ (1,0) [0|127] "%"  Cockpit
+ SG_ displayGridCharging : 8|2@1+ (1,0) [0|1] "-"  Cockpit
+ SG_ displayAuxCharging : 10|2@1+ (1,0) [0|1] "-"  Cockpit
+
+BO_ 949 Light_Status: 2 PERS
+ SG_ brakeLightStatus : 0|2@1+ (1,0) [0|3] ""  Cockpit
+ SG_ leftBlinkerLightStatus : 2|2@1+ (1,0) [0|3] ""  Cockpit
+ SG_ rightBlinkerLightStatus : 4|2@1+ (1,0) [0|3] ""  Cockpit
+ SG_ lowBeamLightStatus : 6|2@1+ (1,0) [0|3] ""  Cockpit
+ SG_ highBeamLightStatus : 8|2@1+ (1,0) [0|3] ""  Cockpit
+
+BO_ 2024 Diagnostics: 8 PERS
+ SG_ DTC_single_frame_size : 0|4@1+ (1,0) [0|15] ""  PERS
+ SG_ DTC_response_sid : 8|8@1+ (1,0) [0|255] ""  PERS
+ SG_ DTC_id : 16|24@1+ (1,0) [0|16777215] ""  PERS
+ SG_ DTC_st_test_failed : 40|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_st_test_failed_this_cycle : 41|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_st_pending_dtc : 42|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_st_confirmed_dtc : 43|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_st_test_not_cmplt_since_clr : 44|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_st_test_not_cmplt_this_cycle : 45|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_st_test_failed_since_clear : 46|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_st_warning_indicator_request : 47|1@1+ (1,0) [0|1] ""  PERS
+ SG_ DTC_padding : 48|16@1+ (1,0) [43690|43690] ""  PERS
+
+BO_ 1955 Cockpit_Heartbeat: 2 Cockpit
+ SG_ cockpitHeartbeat : 0|16@1+ (1,0) [0|65535] "-"  PERS
+
+BO_ 74 Cockpit_Command_State: 2 Cockpit
+ SG_ commandPowerOff : 0|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandPowerLevelUp : 1|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandPowerLevelDown : 2|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandCadenceComfortUp : 3|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandCadenceComfortDown : 4|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandBlinkerRight : 5|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandBlinkerLeft : 6|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandHighBeam : 7|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandHorn : 8|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandWalkAssist : 9|1@1+ (1,0) [0|1] ""  PERS
+ SG_ commandWalkAssistDirection : 10|2@1+ (1,0) [0|3] ""  PERS
+
+BO_ 1009 Authentication_Action: 6 Cockpit
+ SG_ authenticationToken : 0|32@1+ (1,0) [0|0] ""  PERS
+ SG_ authenticationAction : 32|2@1+ (1,0) [0|0] ""  PERS
+ SG_ authenticationActionMsgId : 40|8@1+ (1,0) [0|255] ""  PERS
+
+BO_ 1010 Cockpit_Settings_Action: 2 Cockpit
+ SG_ cockpitSettingsActionMsgId : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ displaySpeedUnitRequired : 8|2@1+ (1,0) [0|2] ""  PERS
+
+BO_ 244 TRITEK_BATT_PACKET02: 8 TRITEK
+ SG_ TRITEK_SOC : 48|8@1+ (1,0) [0|255] "%"  PERS
+ SG_ TRITEK_Volt : 0|16@1+ (0.01,0) [0|65535] "V"  PERS
+ SG_ TRITEK_Current : 16|16@1- (0.01,0) [-32768|32767] "A"  PERS
+ SG_ TRITEK_SOH : 56|8@1+ (1,0) [0|0] "%"  PERS
+
+BO_ 500 TRITEK_BATT_PACKET03: 8 TRITEK
+ SG_ TRITEK_allowedChargeCurrent : 32|8@1+ (0.01,0) [0|255] "A"  PERS
+
+BO_ 243 TRITEK_BATT_PACKET09: 8 TRITEK
+ SG_ TRITEK_batterySOC : 48|8@1+ (1,0) [0|100] "%"  PERS
+ SG_ TRITEK_temperature : 56|8@1- (1,0) [-128|127] "°C"  PERS
+
+BO_ 385 GOLDENCELL_TPDO1: 8 GOLDENCELL
+ SG_ Goldencell_SOC : 40|8@1+ (1,0) [0|255] "1%/bit"  PERS
+ SG_ Goldencell_voltage : 48|16@1+ (0.1,0) [0|65535] "V"  PERS
+ SG_ Goldencell_current : 8|16@1+ (0.1,0) [-32768|32767] "A"  PERS
+
+BO_ 236 BMZ_OBJ0002: 8 BMZ
+ SG_ BMZ_operationMode : 0|8@1+ (1,0) [0|255] ""  PERS
+ SG_ BMZ_dischargingChargingPerm : 8|8@1+ (1,0) [0|255] ""  PERS
+ SG_ BMZ_ioDetect : 16|8@1+ (1,0) [0|255] ""  PERS
+ SG_ BMZ_dischargingCharging : 24|8@1+ (1,0) [0|255] ""  PERS
+ SG_ BMZ_switchOffAlert : 32|8@1+ (1,0) [0|255] ""  PERS
+ SG_ BMZ_flags : 40|5@1+ (1,0) [0|31] ""  PERS
+
+BO_ 239 BMZ_OBJ0009: 8 BMZ
+ SG_ BMZ_maxDischargeCurrent : 0|32@1+ (0.001,0) [-2147483648|2147483647] "A"  PERS
+ SG_ BMZ_maxDischargeVoltage : 32|32@1+ (0.001,0) [-2147483648|2147483647] "V"  PERS
+
+BO_ 240 BMZ_OBJ000A: 8 BMZ
+ SG_ BMZ_maxChargeCurrent : 0|21@1+ (0.001,0) [-2097152|2097151] "A"  PERS
+ SG_ BMZ_maxChargeVoltage : 21|21@1+ (0.001,0) [-2097152|2097151] "A"  PERS
+
+BO_ 243 BMZ_OBJ000B: 8 BMZ
+ SG_ BMZ_fullChargeCapacity : 21|21@1+ (1,0) [-2097152|2097151] "mAh"  PERS
+ SG_ BMZ_remainingCapacity : 42|21@1+ (1,0) [-2097152|2097151] "mAh"  PERS
+
+BO_ 1855 TRITEK_BATT_Shutdown: 8 TRITEK
+ SG_ TRITEK_power_shutdown : 0|8@1+ (1,0) [0|2] ""  PERS
+
+BO_ 1599 TRTIEK_BATT_Config: 8 TRITEK
+ SG_ TRITEK_hearbeat_en : 7|1@1+ (1,0) [0|1] ""  PERS
+ SG_ TRITEK_shutdown_en : 15|1@1+ (1,0) [0|1] ""  PERS
+ SG_ TRITEK_hearbeat_delay : 0|7@1+ (1,0) [1|5] "s" Vector__XXX
+ SG_ TRITEK_shutdow_delay : 8|7@1+ (1,0) [0|5] "s" Vector__XXX
+
+
+
+CM_ SG_ 1578 ASI1_RemoteState "0: motor OFF, 1: motor IDLE, 2: motor ON";
+CM_ SG_ 1578 ASI1_Heartbeat "roll from 0 to 255";
+CM_ SG_ 1578 ASI1_Torque_Cmd "100% = 4096 counts";
+CM_ SG_ 1579 ASI2_RemoteState "0: motor OFF, 1: motor IDLE, 2: motor ON";
+CM_ SG_ 1579 ASI2_Heartbeat "roll from 0 to 255";
+CM_ SG_ 1579 ASI2_Torque_Cmd "100% = 4096 counts";
+CM_ SG_ 2181349722 HZM1_direction_write "0 for forward, 1 for backward";
+CM_ SG_ 2466545970 HZM1_motor_speed "Gear ratio: 9.5885";
+CM_ SG_ 2466545970 HZM1_direction_read "0 for forward, 1 for backward";
+CM_ SG_ 2466546226 HZM2_motor_speed "Gear ratio: 9.5885";
+CM_ SG_ 2466546226 HZM2_direction_read "0 for forward, 1 for backward";
+CM_ SG_ 2181611866 HZM2_direction_write "0 for forward, 1 for backward";
+CM_ BO_ 2449768802 "Not used by PERS";
+CM_ BO_ 2450031202 "Not used by PERS";
+CM_ SG_ 343 displayVehicleSpeed "In mph when displaySpeedUnit =3D DI_SPEED_MPH";
+CM_ SG_ 343 displaySpeedUnit "Speed units, 0-kph 1-mph";
+CM_ SG_ 993 authenticationReceivedMsgId "Message ID of auhentication action message.";
+CM_ SG_ 994 cockpitSettingReceivedMsgId "Message ID of cockpit settings action message.";
+CM_ SG_ 359 displayBatterySOC "in % of SOC";
+CM_ SG_ 359 displayGridCharging "Charging on Grid.";
+CM_ SG_ 1009 authenticationToken "Authentication token";
+CM_ SG_ 1009 authenticationAction "Action to execute on reception of this message";
+CM_ SG_ 1009 authenticationActionMsgId "Message ID of auhentication action message.";
+CM_ SG_ 1855 TRITEK_power_shutdown "0 : keep / 1 : power on / 2 : shutdown";
+CM_ SG_ 1599 TRITEK_hearbeat_delay "Shutdown delay after heartbeat loss, ranges from 1 to 5 seconds.";
+CM_ SG_ 1599 TRITEK_shutdow_delay "Shutdown delay after command is sent, ranges from 0 to 5 seconds";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4e+38 3.4e+38;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+BA_ "BusType" "CAN FD";
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p11 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p491 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p492 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p493 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p494 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p1677 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p348 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p258 43;
+BA_ "GenSigStartValue" SG_ 1578 ASI1_SDO_cmd_p299 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p11 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p491 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p492 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p493 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p494 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p1677 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p348 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p258 43;
+BA_ "GenSigStartValue" SG_ 1579 ASI2_SDO_cmd_p299 43;
+BA_ "GenSigStartValue" SG_ 1827 Sigma_protocol_minor_version 8;
+BA_ "GenSigStartValue" SG_ 2449768802 HZM1_duplicate_id_check_value 1;
+BA_ "GenSigStartValue" SG_ 2450031202 HZM2_duplicate_id_check_value 1;
+VAL_ 81 PERS_data_Mux 419 "Movement" 420 "Torque" 160 "Status" 161 "Effort_Level" 421 "Propulsion_Setpoint" 162 "Cadence_Level" ;
+VAL_ 1578 ASI1_SDO_request_Mux 794624 "ASI1_Regulator_mode" 2891783 "ASI1_Max_monitoring_current" 2957319 "ASI1_Max_braking_current" 3022855 "ASI1_Remote_state_command" 3088391 "ASI1_Remote_torque_command" 925722 "ASI1_Remote_speed_command" 1908741 "ASI1_Filtered_Q_curr" 204804 "ASI1_Faults" 2891780 "ASI1_Faults2" ;
+VAL_ 1578 ASI1_mode 0 "speed" 1 "torque" ;
+VAL_ 1578 ASI1_SDO_cmd_p11 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_SDO_cmd_p491 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_SDO_cmd_p492 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_RemoteState 0 "OFF" 1 "IDLE" 2 "RUN" ;
+VAL_ 1578 ASI1_SDO_cmd_p493 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_SDO_cmd_p494 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_SDO_cmd_p1677 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_SDO_cmd_p348 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_SDO_cmd_p258 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1578 ASI1_SDO_cmd_p299 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1450 ASI1_SDO_Answer_Mux 794624 "ASI1_Regulator_mode_in" 2891783 "ASI1_Max_monitoring_current_in" 2957319 "ASI1_Max_braking_current_in" 3088391 "ASI1_Remote_torque_command_in" 925722 "ASI1_Remote_speed_command_in" 3022855 "ASI1_Regulator_state_in" 1908741 "ASI1_Filtered_Q_curr_in" 204804 "ASI1_Faults_in" 2891780 "ASI1_Faults2_in" ;
+VAL_ 1450 ASI1_SDO_p11_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_mode_in 0 "speed" 1 "torque" ;
+VAL_ 1450 ASI1_SDO_p491_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_SDO_p492_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_SDO_p494_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_SDO_p1677_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_SDO_p493_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_RemoteState_in 0 "OFF" 1 "IDLE" 2 "RUN" ;
+VAL_ 1450 ASI1_SDO_p348_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_SDO_p258_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1450 ASI1_SDO_p299_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1834 ASI1_State_code 0 "Boot up / initializing" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
+VAL_ 1579 ASI2_SDO_request_Mux 794624 "ASI2_Regulator_mode" 2891783 "ASI2_Max_monitoring_current" 2957319 "ASI2_Max_braking_current" 3022855 "ASI2_Remote_state_command" 3088391 "ASI2_Remote_torque_command" 925722 "ASI2_Remote_speed_command" 1908741 "ASI2_Filtered_Q_curr" 204804 "ASI2_Faults" 2891780 "ASI2_Faults2" ;
+VAL_ 1579 ASI2_mode 0 "speed" 1 "torque" ;
+VAL_ 1579 ASI2_SDO_cmd_p11 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_SDO_cmd_p491 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_SDO_cmd_p492 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_RemoteState 0 "OFF" 1 "IDLE" 2 "RUN" ;
+VAL_ 1579 ASI2_SDO_cmd_p493 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_SDO_cmd_p494 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_SDO_cmd_p1677 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_SDO_cmd_p348 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_SDO_cmd_p258 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1579 ASI2_SDO_cmd_p299 64 "Read" 43 "Write_2Bytes" 47 "Write_1Byte" 39 "Write_3Bytes" 35 "Write_4Bytes" ;
+VAL_ 1451 ASI2_SDO_Answer_Mux 794624 "ASI2_Regulator_mode_in" 2891783 "ASI2_Max_monitoring_current_in" 2957319 "ASI2_Max_braking_current_in" 3088391 "ASI2_Remote_torque_command_in" 925722 "ASI2_Remote_speed_command_in" 3022855 "ASI2_Regulator_state_in" 1908741 "ASI2_Filtered_Q_curr_in" 204804 "ASI2_Faults_in" 2891780 "ASI2_Faults2_in" ;
+VAL_ 1451 ASI2_SDO_p11_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_mode_in 0 "speed" 1 "torque" ;
+VAL_ 1451 ASI2_SDO_p491_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_SDO_p492_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_SDO_p494_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_SDO_p493_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_SDO_p1677_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_RemoteState_in 0 "OFF" 1 "IDLE" 2 "RUN" ;
+VAL_ 1451 ASI2_SDO_p348_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_SDO_p258_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1451 ASI2_SDO_p299_in 96 "Write_Complete" 67 "Read_4Bytes" 71 "Read_3Bytes" 75 "Write_2Bytes" 79 "Write_1Byte" ;
+VAL_ 1835 ASI2_State_code 0 "Boot up / initializing" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
+VAL_ 259 Sigma_screen_REPLY_S_DATA_Mux 1284 "R500_Generic_button_states" ;
+VAL_ 259 Sigma_UP_Button_read 0 "Not pressed" 1 "Pressed" 15 "Disabled" ;
+VAL_ 259 Sigma_DOWN_Button_read 0 "Not pressed" 1 "Pressed" 15 "Disabled" ;
+VAL_ 259 Sigma_A_Button_read 0 "Not pressed" 1 "Pressed" 15 "Disabled" ;
+VAL_ 259 Sigma_B_Button_read 0 "Not pressed" 1 "Pressed" 15 "Disabled" ;
+VAL_ 259 Sigma_C_Button_read 0 "Not pressed" 1 "Pressed" 15 "Disabled" ;
+VAL_ 259 Sigma_Power_Button_read 0 "Not pressed" 1 "Pressed" 15 "Disabled" ;
+VAL_ 259 Sigma_LIGHT_Button_read 0 "Not pressed" 1 "Pressed" 15 "Disabled" ;
+VAL_ 1795 Sigma_screen_READ_S_DATA_Mux 1284 "R500_Generic_button_states" ;
+VAL_ 1827 Sigma_screen_WRITE_S_DATA_Mux 1285 "R500_LED_indicator" 1282 "R500_Configuration" 0 "SIGMA_CAN_Protocol_Information" 66 "Bike_Setup_Information_1" 16 "Ride_Live_Information_1" 83 "Control_Assistance" 48 "Battery_Live_Information_1" ;
+VAL_ 1827 Sigma_LED1 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED2 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED3 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED4 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED5 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED6 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED7 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED8 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 1827 Sigma_LED9 0 "OFF" 1 "LIGHT_BLUE" 2 "DARK_BLUE" 3 "GREEN" 4 "PINK" 5 "RED" ;
+VAL_ 97 GEM1_control_mode_in 0 "Torque" 1 "Speed" ;
+VAL_ 97 GEM1_motor_state 0 "INIT" 1 "IDLE" 2 "RUN" 3 "ERROR" ;
+VAL_ 96 GEM1_control_mode 0 "Set by settings" 1 "Torque" 2 "Speed" ;
+VAL_ 113 GEM2_control_mode_in 0 "Torque" 1 "Speed" ;
+VAL_ 113 GEM2_motor_state 0 "INIT" 1 "IDLE" 2 "RUN" 3 "ERROR" ;
+VAL_ 112 GEM2_control_mode 0 "Set by settings" 1 "Torque" 2 "Speed" ;
+VAL_ 343 displaySpeedUnit 0 "DI_SPEED_KPH" 1 "DI_SPEED_MPH" ;
+VAL_ 343 displayRideMode 0 "RIDE_MODE_NEUTRAL" 1 "RIDE_MODE_BACKWARD" 2 "RIDE_MODE_FORWARD" ;
+VAL_ 993 authenticationActionResult 0 "RESULT_ERROR" 1 "RESULT_AUTHENTICATION_KO" 2 "RESULT_CHANGE_KO" 165 "RESULT_OK" 3 "RESULT_BAD_AUTH_MSG_ID" ;
+VAL_ 994 changeSpeedUnitResult 0 "RESULT_NO_CHANGE" 1 "RESULT_OK" 2 "RESULT_KO" ;
+VAL_ 64 persAuthenticationState 0 "PERS_AUTHENTICATION_WAIT" 1 "PERS_AUTENTICATION_FAILED" 2 "PERS_AUTHENTICATION_PASSED" 3 "PERS_AUTHENTICATION_LOCKED" ;
+VAL_ 359 displayGridCharging 0 "GRID_CHARGING_NONE" 1 "GRID_CHARGING_IN_PROGRESS" ;
+VAL_ 359 displayAuxCharging 0 "AUX_CHARGING_NONE" 1 "AUX_CHARGING_IN_PROGRESS" ;
+VAL_ 949 brakeLightStatus 0 "LIGHT_OFF" 1 "LIGHT_ON" 2 "LIGHT_FAULT" ;
+VAL_ 949 leftBlinkerLightStatus 0 "LIGHT_OFF" 1 "LIGHT_ON" 2 "LIGHT_FAULT" ;
+VAL_ 949 rightBlinkerLightStatus 0 "LIGHT_OFF" 1 "LIGHT_ON" 2 "LIGHT_FAULT" ;
+VAL_ 949 lowBeamLightStatus 0 "LIGHT_OFF" 1 "LIGHT_ON" 2 "LIGHT_FAULT" ;
+VAL_ 949 highBeamLightStatus 0 "LIGHT_OFF" 1 "LIGHT_ON" 2 "LIGHT_FAULT" ;
+VAL_ 1009 authenticationAction 1 "AUTHENTICATE" 2 "CHANGE_TOKEN" ;
+VAL_ 1010 displaySpeedUnitRequired 0 "DI_SPEED_KPH" 1 "DI_SPEED_MPH" 2 "DI_SPEED_NO_CHANGE" ;
+

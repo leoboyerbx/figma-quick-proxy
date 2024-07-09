@@ -1,6 +1,6 @@
-const robot = require("@hurdlegroup/robotjs");
-const { SerialPort } = require('serialport')
-const WebSocket = require('ws');
+import robot from "@hurdlegroup/robotjs";
+import { SerialPort } from 'serialport';
+import WebSocket from 'ws';
 
 async function serialButtons() {
     const ports = await SerialPort.list()
@@ -40,7 +40,7 @@ async function wsButtons() {
         ws.on('message', function message(data) {
             console.log('received: %s', data);
             if (data.length === 1) {
-                robot.typeString(data.toString())
+                typeString(data.toString())
             }
         });
     };
@@ -48,4 +48,4 @@ async function wsButtons() {
     connect()
 }
 
-module.exports = () => wsButtons()
+export default wsButtons
